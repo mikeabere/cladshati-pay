@@ -103,7 +103,7 @@ class Cladshati_Mpesa_Gateway extends WC_Payment_Gateway {
     }
 
     private function initiate_stk_push($phone, $amount, $account_reference, $transaction_desc, $callback_url) {
-        $url = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
+        $url = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v2/processrequest';//updated to v2
         $access_token = $this->get_access_token();
 
         $timestamp = date('YmdHis');
