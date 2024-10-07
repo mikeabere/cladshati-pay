@@ -82,13 +82,13 @@ class Cladshati_Pay {
 
         // Here you would typically call your M-Pesa gateway's process_payment method
         // For this example, we'll just simulate a successful request
-        // $success = true;
+        $success = true;
 
-        // if ($success) {
-        //     wp_send_json_success(array('message' => 'M-Pesa request sent successfully.'));
-        // } else {
-        //     wp_send_json_error(array('message' => 'Failed to process M-Pesa payment.'));
-        // }
+        if ($success) {
+            wp_send_json_success(array('message' => 'M-Pesa request sent successfully.'));
+        } else {
+            wp_send_json_error(array('message' => 'Failed to process M-Pesa payment.'));
+        }
     }
 }
 
